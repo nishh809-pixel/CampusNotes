@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusNotes | Student Notes Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">CampusNotes</div>
+        <p>Your personal study space</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h1>Welcome to CampusNotes!</h1>
+            <p>Organise your thoughts, save your notes and study smarter.</p>
+        </section>
+
+        <section class="note-form">
+            <h2 id="form-heading">Create a New Note</h2>
+
+            <input type="text" id="note-title"
+                   placeholder="Enter note title">
+
+            <textarea id="note-content"
+                      placeholder="Write your notes here..."></textarea>
+
+            <button id="save-button" onclick="saveNote()">
+                Add Note
+            </button>
+
+            <button id="cancel-button" onclick="cancelEdit()"
+                    class="secondary hidden">
+                Cancel Edit
+            </button>
+        </section>
+
+        <section class="notes-section">
+            <div class="notes-heading">
+                <h2>My Notes</h2>
+                <input type="text" id="search-input"
+                       placeholder="Search notes...">
+            </div>
+
+            <div id="notes-list" class="notes-list"></div>
+
+            <p id="empty-message">No notes yet. Create your first note!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusNotes | Made for Students</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
